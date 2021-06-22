@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<!-- Begin Header💪 -->
+	<div id="header" th:fragment="headerFragment">
+		ට   ​  ⠀◝◜  ⠀  ⠀⠀◝⠀◝◜  ⠀◝◜⠀◝◜  ⠀  ⠀⠀⠀⠀⠀⠀⠀◝◜◜ට   ​  ⠀◝◜  ⠀  ⠀⠀ට   ​  ⠀◝◜  ⠀  ⠀⠀◝⠀⠀⠀⠀⠀⠀⠀⠀◝◜ට   ​  ⠀◝◜  ⠀  ⠀⠀◝⠀<br/>⠀◝◜⠀
+		<a th:href="@{/addMember}" 	th:if="${session.SID == null or session.SLEVEL == '1'}">회원가입</a>⠀◝⠀◝◜ 
+		<a th:href="@{/memberList}" th:if="${session.SLEVEL == '1'}">회원전체검색</a>⠀◝◜⠀◝◜  ⠀  
+		<a th:href=@{#} 			th:if="${session.SLEVEL == '1' or session.SLEVEL == '2'}">상품등록</a>⠀⠀◝◜  ⠀◝◜
+		<a th:href="@{#}" 			th:if="${session.SID ne null}">상품전체검색</a>⠀◝◜  ⠀⠀  ⠀⠀◝⠀⠀
+		<a th:href="@{/login}" 		th:if="${session.SID eq null}">로그인</a>⠀◝◜◝◜⠀◝◜
+		<a th:href="@{/logout}" 	th:unless="${session.SID eq null}" id="logout">로그아웃</a>⠀⠀<br/>
+		_◢╲___◢╲◢╲_◢╲_◢╲_            _◢╲___◢╲◢╲_◢╲_◢╲_             _◢╲___◢╲◢╲_◢╲_◢╲_             _◢╲___◢╲◢╲_◢╲_◢╲_         _◢╲___◢╲◢╲_◢╲_◢╲_    <br/>
+		𓀚𓀛𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀚𓀛𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀚𓀛𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀚𓀛𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥<br/>
+		<br/>
+		<div th:if="${session.SID != null}" style="text-align: right;">
+			<label>아이디 : [[${session.SID}]] / [[${session.SLEVELNAME}]] : [[${session.SNAME}]] 님이 로그인 하셨습니다.</label>
+		</div>
+	</div>
+	<!-- End Header🖐 -->
+
+</html>
